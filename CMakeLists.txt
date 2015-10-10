@@ -50,6 +50,9 @@ ENDIF(CMAKE_BUILD_TYPE MATCHES "Debug")
 add_library(Mr4cProperties SHARED "src/cpp/Mr4cProperties.cpp")
 target_link_libraries( Mr4cProperties ${MR4C_LIBS} ${LINKER_FLAGS})
 
+add_library(Mr4cThreads SHARED "src/cpp/Mr4cThreads.cpp")
+target_link_libraries( Mr4cThreads ${MR4C_LIBS} ${LINKER_FLAGS})
+
 # add_library(Mr4cMessaging SHARED "src/cpp/Mr4cMessaging.cpp")
 # target_link_libraries( Mr4cMessaging ${MR4C_LIBS} ${LINKER_FLAGS})
 

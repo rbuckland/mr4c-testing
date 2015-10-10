@@ -1,0 +1,11 @@
+{
+	"algoConfig" : 
+	{
+	  "inline" : 
+	  {
+		"artifact" : "Mr4cThreads",
+          	"name" : "mr4cThreads",
+          	"type" : "NATIVEC"
+          }
+	}
+}
