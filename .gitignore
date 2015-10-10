@@ -27,3 +27,9 @@
 *.exe
 *.out
 *.app
+#cmake left overs
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+logs
+Makefile
