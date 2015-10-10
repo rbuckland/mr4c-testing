@@ -33,3 +33,7 @@ CMakeFiles
 cmake_install.cmake
 logs
 Makefile
+
+#mr4c
+mr4c-resolved-core.properties
+mr4c-resolved-hadoop.properties

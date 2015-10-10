@@ -28,6 +28,7 @@ public:
         std::cout << ":: thread2Runner waiting .." << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
       }
+      std::cout << ":: thread2Runner finished" << std::endl;
 
     }
 
@@ -35,10 +36,12 @@ public:
     {
 
         std::cout << "***************** BEGIN *****************" << std::endl;
-        std::thread t1 { thread2Runner }; // starts our thread
+        std::thread t2 ( &Mr4cThreads::thread2Runner , this); // starts our thread
+        std::cout << ":: thread2 started .. sleeping for 6s" << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(6000));
+        std::cout << ":: notifying thread2" << std::endl;
         completed = 1;
-        t1.join(); // wait for the thread to complete
+        t2.join(); // wait for the thread to complete
         std::cout << "***************** END *****************" << std::endl;
     }
 
