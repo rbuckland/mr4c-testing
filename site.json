@@ -1,0 +1,8 @@
+{
+    "clusters" : {
+        "local" : {
+            "jobTracker" : "cloudera1:8032"
+           ,"nameNode" : "hdfs://cloudera1:8020"
+        }
+    }
+}

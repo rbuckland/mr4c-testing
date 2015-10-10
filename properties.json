@@ -1,0 +1,11 @@
+{
+	"algoConfig" : 
+	{
+	  "inline" : 
+	  {
+		"artifact" : "Mr4cProperties",
+          	"name" : "mr4cProperties",
+          	"type" : "NATIVEC"
+          }
+	}
+}
