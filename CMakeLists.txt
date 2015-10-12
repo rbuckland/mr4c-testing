@@ -53,6 +53,12 @@ target_link_libraries( Mr4cProperties ${MR4C_LIBS} ${LINKER_FLAGS})
 add_library(Mr4cThreads SHARED "src/cpp/Mr4cThreads.cpp")
 target_link_libraries( Mr4cThreads ${MR4C_LIBS} ${LINKER_FLAGS})
 
+add_library(MessagingMaster SHARED "src/cpp/MessagingMaster.cpp")
+target_link_libraries( MessagingMaster ${MR4C_LIBS} ${LINKER_FLAGS})
+
+add_library(MessagingWorker SHARED "src/cpp/MessagingWorker.cpp")
+target_link_libraries( MessagingWorker ${MR4C_LIBS} ${LINKER_FLAGS})
+
 # add_library(Mr4cMessaging SHARED "src/cpp/Mr4cMessaging.cpp")
 # target_link_libraries( Mr4cMessaging ${MR4C_LIBS} ${LINKER_FLAGS})
 

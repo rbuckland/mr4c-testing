@@ -1,0 +1,14 @@
+{
+	"algoConfig" : 
+	{
+	  "inline" : 
+	  {
+		"artifact" : "MessagingMaster",
+          	"name" : "messagingMaster",
+          	"type" : "NATIVEC"
+          }
+	}
+
+        // how many workers do we expect to be connecting to us ? 
+        ,"params" : { "trialInputCount" : 5 }
+}

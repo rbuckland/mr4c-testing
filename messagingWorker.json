@@ -1,0 +1,12 @@
+{
+	"algoConfig" : 
+	{
+	  "inline" : 
+	  {
+		"artifact" : "MessagingWorker",
+          	"name" : "messagingWorker",
+          	"type" : "NATIVEC"
+          }
+	}
+
+}
