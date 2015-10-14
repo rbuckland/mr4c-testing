@@ -49,28 +49,28 @@ Ths most interesting property there is the jobid and taskid :-) So from this we 
   This is a simple test to show / workout how the messaging worked. Essentially at the moment - mr4c only uses PUSH http messages OUT from the algorithm. It cannot receive any.
 
 
-    ***************** BEGIN *****************
-    Sending a message
-    2015-10-14 06:19:55,253 INFO  mr4c.java.message.Messages: Adding message handler for topic = [messagetest] and URI = [http://httpbin.org/post]
-    2015-10-14 06:19:55,260 INFO  mr4c.java.message.HttpMessageHandler: POSTing message to [http://httpbin.org/post]: [topic=[messagetest]; content=[Hellow Master]; contentType=[text/plain]]
-    2015-10-14 06:19:55,437 INFO  mr4c.java.message.HttpMessageHandler: Status line: HTTP/1.1 200 OK
-    2015-10-14 06:19:55,437 INFO  mr4c.java.message.HttpMessageHandler: Content: {
-      "args": {},
-      "data": "Hellow Master",
-      "files": {},
-      "form": {},
-      "headers": {
-        "Content-Length": "13",
-        "Content-Type": "text/plain",
-        "Host": "httpbin.org",
-        "User-Agent": "Apache-HttpClient/4.2.5 (java 1.5)"
-      },
-      "json": null,
-      "origin": "x.x.x.x",
-      "url": "http://httpbin.org/post"
-    }
-    
-    ***************** END *****************
+       ***************** BEGIN *****************
+       Sending a message
+       2015-10-14 06:19:55,253 INFO  mr4c.java.message.Messages: Adding message handler for topic = [messagetest] and URI = [http://httpbin.org/post]
+       2015-10-14 06:19:55,260 INFO  mr4c.java.message.HttpMessageHandler: POSTing message to [http://httpbin.org/post]: [topic=[messagetest]; content=[Hellow Master]; contentType=[text/plain]]
+       2015-10-14 06:19:55,437 INFO  mr4c.java.message.HttpMessageHandler: Status line: HTTP/1.1 200 OK
+       2015-10-14 06:19:55,437 INFO  mr4c.java.message.HttpMessageHandler: Content: {
+         "args": {},
+         "data": "Hellow Master",
+         "files": {},
+         "form": {},
+         "headers": {
+           "Content-Length": "13",
+           "Content-Type": "text/plain",
+           "Host": "httpbin.org",
+           "User-Agent": "Apache-HttpClient/4.2.5 (java 1.5)"
+         },
+         "json": null,
+         "origin": "x.x.x.x",
+         "url": "http://httpbin.org/post"
+       }
+       
+       ***************** END *****************
 
   The only protocol supported is http. See ``runMessagingWorker.sh`` for the PUSH. 
 
