@@ -42,5 +42,53 @@ This is a sample from the output
 
 Ths most interesting property there is the jobid and taskid :-) So from this we can know "which one" we are in a long running / multi task job.
 
-* Mr4cMessaging - Showcase the Messaging Capabilities within the Mr4c Environment
+* Messaging - Showcase the Messaging Capabilities within the Mr4c Environment
+
+  This has shown a push only model of messaging (push out from the algorithm)
+
+  This is a simple test to show / workout how the messaging worked. Essentially at the moment - mr4c only uses PUSH http messages OUT from the algorithm. It cannot receive any.
+
+
+    ***************** BEGIN *****************
+    Sending a message
+    2015-10-14 06:19:55,253 INFO  mr4c.java.message.Messages: Adding message handler for topic = [messagetest] and URI = [http://httpbin.org/post]
+    2015-10-14 06:19:55,260 INFO  mr4c.java.message.HttpMessageHandler: POSTing message to [http://httpbin.org/post]: [topic=[messagetest]; content=[Hellow Master]; contentType=[text/plain]]
+    2015-10-14 06:19:55,437 INFO  mr4c.java.message.HttpMessageHandler: Status line: HTTP/1.1 200 OK
+    2015-10-14 06:19:55,437 INFO  mr4c.java.message.HttpMessageHandler: Content: {
+      "args": {},
+      "data": "Hellow Master",
+      "files": {},
+      "form": {},
+      "headers": {
+        "Content-Length": "13",
+        "Content-Type": "text/plain",
+        "Host": "httpbin.org",
+        "User-Agent": "Apache-HttpClient/4.2.5 (java 1.5)"
+      },
+      "json": null,
+      "origin": "x.x.x.x",
+      "url": "http://httpbin.org/post"
+    }
+    
+    ***************** END *****************
+
+  The only protocol supported is http. See ``runMessagingWorker.sh`` for the PUSH. 
+
+  Master does not do anything really because, INCOMING subscriber messaging is not included / implemented / designed.
+
+* mr4cThreads - shows / test spinning up a secondary thread (thought might be useful for messaging :0)
+
+
+
+### How to run these ?
+
+run ``cmake .`` and then ``make`` and then any / all of 
+
+
+    runMessagingMaster.sh # shows waiting for a message (it never arrives - :-)
+    runMessagingWorker.sh # whos sending a message to an external http:// pub/sub gateway. Note the configuration setup
+    runProperties.sh # shows dumping the running properties
+    runThreads.sh # shows spinning off a thread 
+
+
 
