@@ -1,0 +1,11 @@
+{
+	"algoConfig" : 
+	{
+	  "inline" : 
+	  {
+		"artifact" : "Mr4cOpenMP",
+          	"name" : "mr4cOpenMP",
+          	"type" : "NATIVEC"
+          }
+	}
+}
