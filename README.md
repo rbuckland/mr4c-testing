@@ -1,7 +1,9 @@
 # mr4c-testing
 Some Simple C++ Test Libraries to show various areas of Mr4c (http://github.com/google/mr4c)
 
-* Mr4cProperties - Showcase the properties found within the Mr4c environment
+### Mr4cProperties 
+
+Showcase the properties found within the Mr4c environment
 
 Simple app which dumps out the properties of the job executing
 
@@ -42,7 +44,15 @@ This is a sample from the output
 
 Ths most interesting property there is the jobid and taskid :-) So from this we can know "which one" we are in a long running / multi task job.
 
-* Messaging - Showcase the Messaging Capabilities within the Mr4c Environment
+#### Running
+
+
+    runProperties.sh # shows dumping the running properties
+
+
+### Messaging 
+
+Showcase the Messaging Capabilities within the Mr4c Environment
 
   This has shown a push only model of messaging (push out from the algorithm)
 
@@ -76,21 +86,96 @@ Ths most interesting property there is the jobid and taskid :-) So from this we 
 
   Master does not do anything really because, INCOMING subscriber messaging is not included / implemented / designed.
 
-* mr4cThreads - shows / test spinning up a secondary thread (thought might be useful for messaging :0)
-
-* openMp - see if the OpenMP library will work
+#### Running
 
 
+    # check the site.json file
+    cmake .
+    make
+    ./runMessagingWorker.sh # sends a message to an external http:// pub/sub gateway. Note the configuration setup
 
-### How to run these ?
+    # this does not work .. as there is no incoming messaging
+    ./runMessagingMaster.sh # shows waiting for a message (it never arrives - :-)
 
-run ``cmake .`` and then ``make`` and then any / all of 
+
+### mr4cThreads 
+
+shows / test spinning up a secondary thread (thought might be useful for messaging :0)
+
+#### Running
 
 
-    runMessagingMaster.sh # shows waiting for a message (it never arrives - :-)
-    runMessagingWorker.sh # whos sending a message to an external http:// pub/sub gateway. Note the configuration setup
-    runProperties.sh # shows dumping the running properties
-    runThreads.sh # shows spinning off a thread 
-    runOpenMP.sh # added a simple (prewritten OpenMP example from https://people.sc.fsu.edu/~jburkardt/cpp_src/dijkstra_openmp/dijkstra_openmp.html)
+    # check the site.json file
+    cmake .
+    make 
+    ./runThreads.sh
+
+### openMp - see if the OpenMP library will work
+
+A real simple example of compiling code using openmp to enforce parallelism in the shared lib.
+This pre writtem OpenMP example comes from https://people.sc.fsu.edu/~jburkardt/cpp_src/dijkstra_openmp/dijkstra_openmp.html
+
+
+    ***************** BEGIN *****************
+    14 October 2015 07:14:56 AM
+    
+    DIJKSTRA_OPENMP
+      C++ version
+      Use Dijkstra's algorithm to determine the minimum
+      distance from node 0 to each node in a graph,
+      given the distances between each pair of nodes.
+    
+      Although a very small example is considered, we
+      demonstrate the use of OpenMP directives for
+      parallel execution.
+    
+      Distance matrix:
+    
+        0   40   15  Inf  Inf  Inf
+       40    0   20   10   25    6
+       15   20    0  100  Inf  Inf
+      Inf   10  100    0  Inf  Inf
+      Inf   25  Inf  Inf    0    8
+      Inf    6  Inf  Inf    8    0
+    
+      P2: Parallel region begins with 4 threads.
+    
+      P2:  First=  P3  P0  Last=:  First=1:  First=0  Last=10  Last=
+    2
+    3
+      P3:  First=4  Last=5
+      P2: Connecting node 2
+      P2: Connecting node 1
+      P2: Connecting node 5
+      P0: Connecting node 3
+      P3: Connecting node 4
+    
+      P1: Exiting parallel region.
+    
+      Minimum distances from node 0:
+    
+       0   0
+       1  35
+       2  15
+       3  45
+       4  49
+       5  41
+    
+    DIJKSTRA_OPENMP
+      Normal end of execution.
+    
+    14 October 2015 07:14:56 AM
+    ***************** END *****************
+
+
+#### Running
+    
+
+    # check the site.json file
+    cmake .
+    make 
+    ./runOpenMP.sh
+
+
 
 
