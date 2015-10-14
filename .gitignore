@@ -35,5 +35,4 @@ logs
 Makefile
 
 #mr4c
-mr4c-resolved-core.properties
-mr4c-resolved-hadoop.properties
+mr4c-resolved-*.properties

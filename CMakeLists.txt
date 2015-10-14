@@ -59,6 +59,6 @@ target_link_libraries( MessagingMaster ${MR4C_LIBS} ${LINKER_FLAGS})
 add_library(MessagingWorker SHARED "src/cpp/MessagingWorker.cpp")
 target_link_libraries( MessagingWorker ${MR4C_LIBS} ${LINKER_FLAGS})
 
-# add_library(Mr4cMessaging SHARED "src/cpp/Mr4cMessaging.cpp")
-# target_link_libraries( Mr4cMessaging ${MR4C_LIBS} ${LINKER_FLAGS})
-
+add_library(Mr4cOpenMP SHARED "src/cpp/Mr4cOpenMP.cpp")
+set_target_properties( Mr4cOpenMP PROPERTIES COMPILE_FLAGS "-fopenmp")
+target_link_libraries( Mr4cOpenMP ${MR4C_LIBS} "m" "gomp" ${LINKER_FLAGS})

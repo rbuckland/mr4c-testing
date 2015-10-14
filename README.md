@@ -78,6 +78,8 @@ Ths most interesting property there is the jobid and taskid :-) So from this we 
 
 * mr4cThreads - shows / test spinning up a secondary thread (thought might be useful for messaging :0)
 
+* openMp - see if the OpenMP library will work
+
 
 
 ### How to run these ?
@@ -89,6 +91,6 @@ run ``cmake .`` and then ``make`` and then any / all of
     runMessagingWorker.sh # whos sending a message to an external http:// pub/sub gateway. Note the configuration setup
     runProperties.sh # shows dumping the running properties
     runThreads.sh # shows spinning off a thread 
-
+    runOpenMP.sh # added a simple (prewritten OpenMP example from https://people.sc.fsu.edu/~jburkardt/cpp_src/dijkstra_openmp/dijkstra_openmp.html)
 
 
