@@ -26,7 +26,7 @@ public:
         std::cout << "***************** BEGIN *****************" << std::endl;
         std::cout << "Sending a message" << std::endl;
 
-        Message msg("worker-calling","Hellow Master");
+        Message msg("messagetest","Hellow Master");
         context.sendMessage(msg); 
 
         std::cout << "***************** END *****************" << std::endl;

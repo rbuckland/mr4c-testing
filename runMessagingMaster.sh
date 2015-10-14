@@ -5,4 +5,4 @@ export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:$PWD/lib
 
 set -e
 
-mr4c_hadoop_remote ./messagingMaster.json -Htasks=1 -Hcores.min=1 -Hcores.max=2 -Hmemory.min=1024 -Hmemory.max=2048
+mr4c_hadoop_remote ./messagingMaster.json -T=conf/topics.properties -Htasks=1 -Hcores.min=1 -Hcores.max=2 -Hmemory.min=1024 -Hmemory.max=2048
