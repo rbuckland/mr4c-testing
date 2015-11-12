@@ -1,6 +1,12 @@
 # mr4c-testing
 Some Simple C++ Test Libraries to show various areas of Mr4c (http://github.com/google/mr4c)
 
+### Additional Support for working with mr4c
+
+The setup of mr4c can at first be complex, this gist has extensive notes detailing the setup and running (with troubleshooting notes) for mr4c.
+
+http://gist.github.com/rbuckland/e28a48155c86a8f29d0b
+
 ### Mr4cProperties 
 
 Showcase the properties found within the Mr4c environment
